@@ -1,6 +1,8 @@
 <?php
 	
 	$cont = 10;
+
+	
 	for ($i=0; $i < $cont; $i++) { 
 		echo "contador igual a: ". $i."<br>";
 	}

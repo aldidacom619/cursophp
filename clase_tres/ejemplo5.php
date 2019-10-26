@@ -18,9 +18,6 @@
         else
         	$ci++;
 	}
-
 	echo "la cantidad de pares es de: ".$cp."<br/>";
 	echo "la cantidad de impares es de: ".$ci;
-	
-
 ?>

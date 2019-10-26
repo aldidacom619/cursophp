@@ -6,7 +6,6 @@ function calcular_area($altura,$base)
 	return $areatriangulo;
 }
 
-
 echo "FUNCIONES<br><br><br>";
 
 echo $area1;
@@ -24,5 +23,4 @@ $base = 50;
 $triangulo2 = ($altura*$base)/2;
 
 echo "el area del triangulo2 es:".$triangulo2."<br>";
-
 ?>
