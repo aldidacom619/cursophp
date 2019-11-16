@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulario</title>
+</head>
+<body>
+<h1>formulario</h1>
+<a href="../index.html">Volver</a>
+
+<form>
+	<fieldset>
+		<legend>Datos persona</legend>
+	<label>NOMBE:</label><br>
+	<input type="text" name="txtnombrepersona" placeholder="nombre persona"><br>
+	<label>PRIMER APELLIDO:</label><br>
+	<input type="text" name="txtprimer_apellido" placeholder="primer apellido"><br>
+	<label>SEGUNDO APELLIDO:</label><br>
+	<input type="text" name="txtsegundo_apellido" placeholder="segundo apellido"><br>
+	</fieldset>
+	<fieldset>
+		<legend>Sexo</legend>
+	<label>SEXO:</label><br>
+	<input type="radio" name="rdsexo" value="M">Masculino
+	<input type="radio" name="rdsexo" value="F">Femenino
+	<br>
+	<label>Fecha Nacimiento</label><br>
+	<input type="date" name="dtNacimiento"><br>
+	</fieldset>
+	<fieldset>
+	<legend>ubicacion</legend>
+	<label>Ciudad</label><br>
+	<select name="slciudad">
+		<option value="La Paz">La Paz</option>
+		<option value="Oruro">Oruro</option>
+		<option value="Potosi">Potosi</option>
+	</select><br>
+	</fieldset>
+	<fieldset>
+	<label>Deportes</label><br>
+	<input type="checkbox" name="ckFutbol" value="1">Futbol
+	<input type="checkbox" name="ckBasquet" value="2">Basquet
+	<input type="checkbox" name="ckFutsal" value="3">Futsal
+	<input type="checkbox" name="ckWally" value="4">Wally
+	<input type="checkbox" name="ckBillar" value="5">Billar
+	<br>
+	</fieldset>
+	<label>Descripcion</label><br>
+	<textarea name="txdescripcion"></textarea>
+	<br>
+	<input type="submit" name="" value="Enviar">
+	<input type="reset" name="" value="limpiar">
+</form>
+</body>
+</html>
