@@ -1,7 +1,7 @@
 <?php 
 include 'cabecera.php';
 include 'conexion.php';
-$sel = $con->query("SELECT *FROM productos");
+$sel = $con->query("SELECT *FROM productos p, categoria c where p.codigo_categoria = c.codigo");
 
  ?>
 
@@ -27,12 +27,13 @@ $sel = $con->query("SELECT *FROM productos");
          while ($f = $sel->fetch_assoc()){?>
           <tr>
             <th scope="row"><?php echo $n++;?></th>
-            <td><?php echo $f['codigo_categoria']?></td>
+            <td><?php echo $f['nombre_categoria']?></td>
             <td><?php echo $f['descripcion']?></td>
             <td><?php echo $f['precio']?></td>
             <td><?php echo $f['cantidad']?></td>
             <td><?php echo $f['estado']?></td>
-            <td></td>
+            <td><a href="editar.php?id=<?php echo $f['id']?>" class="btn btn-warning">editar</a>
+              <a href="eliminar.php?id=<?php echo $f['id']?>" class="btn btn-danger">eliminar</a></td>
           </tr>
         <?}?>
         
