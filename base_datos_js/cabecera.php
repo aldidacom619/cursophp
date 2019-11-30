@@ -5,6 +5,7 @@
   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="recursos/bootstrap-4.3.1/dist/css/bootstrap.min.css">
+  <script src="recursos/jsd/jquery.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -22,6 +23,10 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="categorias.php">Lista Categorias</a>
+      </li>   
+       
+      <li class="nav-item">
+        <a class="nav-link" href="crudjs.php">CRUD JS</a>
       </li>     
     </ul>
   </div>
