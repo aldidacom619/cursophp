@@ -14,7 +14,7 @@ $sel = $con->query("SELECT *FROM categoria");
        <?php while ($f = $sel->fetch_assoc()){?>
           <option value=<?php echo $f['codigo']?>><?php echo $f['nombre_categoria']?></option>
       <?php } ?>
-      </select>
+      </select> 
     </div>
     <div class="form-group col-md-8">
      <label for="inputAddress">Descripcion</label>

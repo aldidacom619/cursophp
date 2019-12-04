@@ -3,7 +3,7 @@
 <head>
 	<title>CRUD</title>
   <link rel="stylesheet" href="recursos/bootstrap-4.3.1/dist/css/bootstrap.min.css">
-
+  <script src="recursos/jsd/jquery.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -20,9 +20,11 @@
         <a class="nav-link" href="nuevo_producto.php">Nuevo producto</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
+        <a class="nav-link" href="crudjs.php">CRUJS</a>
       </li>
-      
+      <li class="nav-item">
+        <a class="nav-link" href="operacionesjs.php">operaciones</a>
+      </li>     
     </ul>
   </div>
 </nav>
