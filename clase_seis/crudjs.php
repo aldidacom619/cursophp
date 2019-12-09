@@ -33,13 +33,16 @@ $sel = $con->query("SELECT *FROM productos p, categoria c where p.codigo_categor
             <td><?php echo $f['precio']?></td>
             <td><?php echo $f['cantidad']?></td>
             <td><?php echo $f['estado']?></td>
-            <td><a href="editar.php?id=<?php echo $f['id']?>" class="btn btn-warning">editar</a>
-              <a href="eliminar.php?id=<?php echo $f['id']?>" class="btn btn-danger">eliminar</a></td>
+            <td><button class="btn btn-warning" onclick="actualizarregistro(<?php echo $f['id']?>)">Editar</button> 
+              <button class="btn btn-danger" onclick="eliminarregistro(<?php echo $f['id']?>)">Eliminar</button>
+              </td>
           </tr>
         <?}?>
         
       </tbody>
     </table>
+
+    
   </div>
   <div class="col-lg-2">
     
@@ -55,7 +58,9 @@ $sel = $con->query("SELECT *FROM productos p, categoria c where p.codigo_categor
         </button>
       </div>
       <div class="modal-body">
-        <form>
+        <form id="formularioregistro">
+          <input type="hidden" name="accion" id="accion">
+          <input type="hidden" name="id_registro" id="id_registro">
           <div class="form-row">
             <div class="form-group col-md-4">
               <label for="inputState">Categoria</label>
@@ -81,8 +86,8 @@ $sel = $con->query("SELECT *FROM productos p, categoria c where p.codigo_categor
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" onclick="guardarregistro()">Enviar</button>
       </div>
     </div>
   </div>

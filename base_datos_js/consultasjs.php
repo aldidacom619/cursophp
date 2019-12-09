@@ -47,7 +47,7 @@ if($_GET){
 				break;	
 			case 'listas':
 				
-				$prod = $con->query("SELECT * FROM productos");
+				$prod = $con->query("SELECT *FROM productos p, categoria c where p.codigo_categoria = c.codigo");
 				echo armartabla($prod);
 				break;
 			default:
@@ -121,7 +121,7 @@ function armartabla($datos)
 		  	while ($f = $datos->fetch_assoc()){
 		  $tabla.=  '<tr>
 		      <th scope="row">'.$con++.'</th>';
-		  $tabla.= '<td>'.$f['codigo_categoria'].'</td>
+		  $tabla.= '<td>'.$f['nombre_categoria'].'</td>
 		      <td>'.$f['descripcion'].'</td>
 		      <td>'.$f['precio'].'</td>
 		      <td>'.$f['cantidad'].'</td>
