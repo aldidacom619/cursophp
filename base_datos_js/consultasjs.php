@@ -133,7 +133,5 @@ function armartabla($datos)
 		  }
 		   $tabla.='</tbody>';
   return $tabla;
-
 }
-
 ?>

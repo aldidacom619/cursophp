@@ -1,27 +1,17 @@
-<?php  
-include 'cabecera.php';
-
-
-//var_dump($sel);
-?>
+<?php  include 'cabecera.php';?>
 <script type="text/javascript" src="operaciones.js"></script>
 <div class="row">
 	<div class="col-lg-2">
-		
 	</div>
 	<div class="col-lg-8">
 		<h3>EJERCICIOS JS</h3>
 		<button class="btn btn-primary" onclick="nuevousario()">NUEVO REGISTRO</button><br>
-		
-		<table class="table table-bordered" id="tabladatos">
-			
+		<table class="table table-bordered" id="tabladatos">		
 		</table>
 	</div>
 	<div class="col-lg-2">		
 	</div>
 </div>
-
-
 <div class="modal fade" id="datosusuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
