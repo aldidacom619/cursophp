@@ -23,8 +23,8 @@
       </div>
       <div class="modal-body">
         <form id="formularioregistro">
-        	<input type="hidden" name="accion" id="accion">
-        	<input type="hidden" name="id_registro" id="id_registro">
+        	<input type="text" name="accion" id="accion">
+        	<input type="text" name="id_registro" id="id_registro">
           <div class="form-row">
 		    <div class="form-group col-md-4">
 		      <label for="inputCity">Categoria</label>
