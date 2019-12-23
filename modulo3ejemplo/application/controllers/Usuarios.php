@@ -45,6 +45,5 @@ class Usuarios extends CI_Controller
 			$this->index();
 		}
 	}
-
 }
 ?>

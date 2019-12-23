@@ -1,5 +1,5 @@
 <?php
-include 'conexion.php';
+include 'conexion.php'; 
 if($_GET) 
 {
 	if(isset($_GET['operacion']))
@@ -17,7 +17,7 @@ if($_GET)
 				break;
 			case 'seleccionar_registro':
 				$id = $_GET['id'];
-				//$id = 17;
+				//$id = 18;
 				$prod = $con->query("SELECT *FROM productos where id = '$id'");
 				$p = $prod->fetch_assoc();
 				echo json_encode($p);

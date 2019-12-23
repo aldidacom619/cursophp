@@ -4,7 +4,7 @@ function inicio()
 	var enlace = "consultasjs.php?operacion=categoria";
 	$.ajax({
 		type:"GET",
-		url: enlace,
+		url: enlace, 
 		success: function(data){
 			//alert(data);
 			$('#slCategoria').html(data);
@@ -40,6 +40,7 @@ function guardarregistro()
 }
 function actualizarregistro(id_registro)
 {
+	//alert(id_registro);
 	$('#accion').val('actualizar');
 	$('#id_registro').val(id_registro);
 	var enlace = "consultasjs.php?operacion=seleccionar_registro";
