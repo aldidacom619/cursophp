@@ -76,7 +76,7 @@ class Usuarios extends CI_controller
 		$this->form_validation->set_message('alpha','El campo %s no debe tener numeros');
 		if($this->form_validation->run()==false)
 		{
-			$this->inicio();
+			$this->nuevousuario();
 		}
 		else
 		{

@@ -2,6 +2,7 @@
   <div class="col-lg-2"></div>
   <div class="col-lg-8">
     <h2>Lista usuarios</h2>
+    <a href="<?php echo base_url('usuarios/nuevousuario');?>" class="btn btn-primary">Nuevo</a>
     <table class="table table-bordered">
       <thead>
         <tr>

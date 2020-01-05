@@ -16,10 +16,6 @@
       <li class="nav-item active">
         <a class="nav-link" href="<?php echo base_url('usuarios');?>">Usuarios</a>        
       </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="<?php echo base_url('usuarios/nuevousuario');?>">Nuevo</a>        
-      </li>
-        
     </ul>
   </div>
 </nav>
