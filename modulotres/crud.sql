@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 21-12-2019 a las 19:32:08
+-- Tiempo de generación: 05-01-2020 a las 13:59:50
 -- Versión del servidor: 5.5.20
 -- Versión de PHP: 5.3.10
 
@@ -45,6 +45,29 @@ INSERT INTO `categoria` (`codigo`, `nombre_categoria`, `estado`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `marca_automovil`
+--
+
+CREATE TABLE IF NOT EXISTS `marca_automovil` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `descripcion_marca` varchar(50) NOT NULL,
+  `estado` varchar(5) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+
+--
+-- Volcado de datos para la tabla `marca_automovil`
+--
+
+INSERT INTO `marca_automovil` (`id`, `descripcion_marca`, `estado`) VALUES
+(1, 'TOYOTA', 'AC'),
+(2, 'NISSAN', 'AC'),
+(5, 'SUZUKI', 'AC'),
+(6, 'JAC', 'AC');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `productos`
 --
 
@@ -68,6 +91,29 @@ INSERT INTO `productos` (`id`, `codigo_categoria`, `descripcion`, `precio`, `can
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `tipo_automovil`
+--
+
+CREATE TABLE IF NOT EXISTS `tipo_automovil` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `descripcion_tipo` varchar(100) NOT NULL,
+  `estado` varchar(5) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+
+--
+-- Volcado de datos para la tabla `tipo_automovil`
+--
+
+INSERT INTO `tipo_automovil` (`id`, `descripcion_tipo`, `estado`) VALUES
+(1, 'AUTOMOVIL', 'AC'),
+(2, 'CAMINIONETA', 'AC'),
+(5, 'VAGONETA', 'AC'),
+(6, 'CAMION', 'AC');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `usuarios`
 --
 
@@ -81,23 +127,40 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `clave` varchar(100) NOT NULL,
   `estado` varchar(5) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
 INSERT INTO `usuarios` (`id`, `nombre`, `apellido`, `correo`, `telefono`, `username`, `clave`, `estado`) VALUES
-(1, 'rudy', 'medrano', 'rudy@gmail.com', '78451263', 'rudy', '123456', 'AC'),
-(2, 'rudy', 'medrano', 'rudy@gmail.com', '78451263', 'rudy', '522c0ce76dc2000c55fa5d7c68d9b3f8', 'AC'),
-(3, 'rudy', '', 'rudy@gmail.com', '78451263', 'rudy', 'd41d8cd98f00b204e9800998ecf8427e', 'AC'),
-(4, 'asdfasdfasdf', '', 'rudy@gmail.com', '78451263', 'rudy', '32f2bfa687cc03a1c00e94b0df275097', 'AC'),
-(5, 'asdfasdf', '', '', '', '', 'd41d8cd98f00b204e9800998ecf8427e', 'AC'),
-(6, 'diego', 'daza alcaraz', 'diego@gmail.com', '78451263', 'dddd', 'e10adc3949ba59abbe56e057f20f883e', 'AC'),
-(7, 'diego', 'daza alcaraz', 'diego@gmail.com', '78451263', 'dddd', 'e10adc3949ba59abbe56e057f20f883e', 'AC'),
-(8, 'diego', 'daza alcaraz', 'diego@gmail.com', '78451263', 'dddd', 'e10adc3949ba59abbe56e057f20f883e', 'AC'),
-(9, 'diego', 'daza alcaraz', 'diego@gmail.com', '78451263', 'dddd', 'e10adc3949ba59abbe56e057f20f883e', 'AC'),
-(10, 'diego', 'daza alcaraz', 'diego@gmail.com', '78451263', 'dddd', 'e10adc3949ba59abbe56e057f20f883e', 'AC');
+(11, 'DIEGO', 'DAZA ALCARAZ', 'aldidacom@gmail.om', '72404619', 'diegodaza', 'e10adc3949ba59abbe56e057f20f883e', 'AC');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `vehiculos`
+--
+
+CREATE TABLE IF NOT EXISTS `vehiculos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_tipo_vehiculo` int(11) NOT NULL,
+  `id_marca_vehiculo` int(11) NOT NULL,
+  `procedencia` varchar(20) NOT NULL,
+  `anhio_modelo` varchar(4) NOT NULL,
+  `color` varchar(10) NOT NULL,
+  `cilindrada` int(11) NOT NULL,
+  `estado` varchar(5) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Volcado de datos para la tabla `vehiculos`
+--
+
+INSERT INTO `vehiculos` (`id`, `id_tipo_vehiculo`, `id_marca_vehiculo`, `procedencia`, `anhio_modelo`, `color`, `cilindrada`, `estado`) VALUES
+(1, 1, 1, 'JAPON', '2017', 'VERDE', 1400, 'AC'),
+(2, 1, 2, 'MEXICO', '2015', 'NEGRO', 2400, 'AC');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
