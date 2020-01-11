@@ -35,8 +35,7 @@ class Reportes extends CI_Controller
 	        $pdf->Output();
 	}
 	function imprimirusuarios()
-	{
-		
+	{		
 		    $datos = $this->Usuarios_model->getusuarios();           
             $pdf = new Pdf2();
             $fecha_hoy = $pdf->fechacompleta();
@@ -49,7 +48,7 @@ class Reportes extends CI_Controller
             $pdf->cabecera = 1;           
             $sum = 0;
             $sum2 = 0;           
-            $pdf->titulo = "REPORTE DE INGRESOS Y EGRESOS";
+            $pdf->titulo = "REPORTE DE USUARIOS";
             $pdf->titulo1 = "";
             $pdf->moneda = "Bolivianos";            
             $pdf->AliasNbPages();
