@@ -38,5 +38,10 @@ class Loguen extends CI_Controller
 			$this->index($error);
 		}
 	}
+	function salir()
+	{
+		$this->session->sess_destroy();
+		redirect('Usuarios');
+	}
 }
 ?>

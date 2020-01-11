@@ -49,7 +49,11 @@ class Usuarios_model extends CI_Model
 			'username' => $username);
 	    $this->db->where('id',$id);
 	    return $this->db->update('usuarios',$data);
-
+	}
+	function eliminarusuario($id)
+	{
+		$this->db->where('id',$id);
+		return  $this->db->delete('usuarios');
 	}
 }
 ?>

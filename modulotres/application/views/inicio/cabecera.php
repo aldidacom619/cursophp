@@ -14,7 +14,16 @@
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
       <li class="nav-item active">
+        <a class="nav-link" href="<?php echo base_url('loguen/salir');?>">Cerrar Session</a>        
+      </li>     
+      <li class="nav-item active">
         <a class="nav-link" href="<?php echo base_url('usuarios');?>">Usuarios</a>        
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="<?php echo base_url('usuarios/listajs');?>">Usuarios con JS</a>        
+      </li>
+       <li class="nav-item active">
+        <a class="nav-link" href="<?php echo base_url('reportes');?>">Reportes</a>        
       </li>
     </ul>
   </div>

@@ -95,8 +95,7 @@ class Usuarios extends CI_controller
 			else
 			{
 				$this->inicio();
-			}
-			
+			}			
 		}
 	}
 	function editar($id_usuario)
@@ -132,5 +131,67 @@ class Usuarios extends CI_controller
 			$this->index();
 		}
 	}
+	function eliminar($id_usuario)
+	{
+
+		$this->Usuarios_model->eliminarusuario($id_usuario);				
+		$this->index();
+	}
+	function listajs()
+	{
+		$filas['filas']= $this->Usuarios_model->getusuarios();
+		$dato['nombre'] = "DIEGO";
+		$dato['apellido'] = "DAZA";
+		$this->load->view("inicio/cabecera",$dato);
+		$this->load->view("usuarios/lista_usuariosjs",$filas);
+		$this->load->view("inicio/pie");
+	}
+	function guardar_datosjs()
+	{
+		$accion = $this->input->post('accion');
+		$id = $this->input->post('id_registro');
+		$nombre = $this->input->post('txtnombre');
+		$apellido = $this->input->post('txtapellidos');
+		$correo = $this->input->post('txtcorreo');
+		$telefono = $this->input->post('txttelefono');
+		$usuario = $this->input->post('txtusername');
+		$clave = md5($this->input->post('txtpass'));
+		$estado = 'AC';
+		if ($accion == 'nuevo')
+		{
+			$insertar = $this->Usuarios_model->guardar_usuario($nombre,$apellido,$correo,$telefono,$usuario,$clave,$estado);
+			if($insertar > 0)
+			{
+				echo "Se guardo correctamente";
+			}
+			else
+			{
+				echo "Error al guardar";
+			}	
+		}
+		else
+		{
+			$update = $this->Usuarios_model->modificarusuario($id,$nombre,$apellido,$correo,$telefono,$usuario);
+			echo "La información se actualizó correctamente";
+		}
+							
+	}
+	function editarjs()
+	{
+		$id_usuario = $this->input->post('id');
+		$datos = $this->Usuarios_model->getusuario_id($id_usuario);
+	 	$json = json_encode($datos); 
+     	echo $json;
+	}
+	function eliminarjs()
+	{
+		$id_usuario = $this->input->post('id');
+		$this->Usuarios_model->eliminarusuario($id_usuario);				
+		echo "Usuario Eliminado";
+	}
+
+
+
+	
 }
 ?>

@@ -26,7 +26,9 @@
             <td><?= $fila->correo?></td>
             <td><?= $fila->telefono?></td>
             <td><?= $fila->username?></td>
-            <td><a href="<?php echo base_url('usuarios/editar/'.$fila->id);?>" class="btn btn-warning">editar</a></td>
+            <td><a href="<?php echo base_url('usuarios/editar/'.$fila->id);?>" class="btn btn-warning">editar</a>
+                <a href="<?php echo base_url('usuarios/eliminar/'.$fila->id);?>" class="btn btn-danger">eliminar</a>
+            </td>
           </tr>
 
         <?}?>        
