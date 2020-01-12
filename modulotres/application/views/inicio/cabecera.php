@@ -22,9 +22,6 @@
       <li class="nav-item active">
         <a class="nav-link" href="<?php echo base_url('usuarios/listajs');?>">Usuarios con JS</a>        
       </li>
-       <li class="nav-item active">
-        <a class="nav-link" href="<?php echo base_url('reportes');?>">Reportes</a>        
-      </li>
     </ul>
   </div>
 </nav>

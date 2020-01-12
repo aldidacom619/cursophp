@@ -16,8 +16,6 @@ class Pdf2 extends FPDF {
     //public $moneda;
     private $encabezado;
     private $wi;
-    
-   
    
 
     public function __construct() {

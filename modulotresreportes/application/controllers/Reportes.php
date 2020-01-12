@@ -93,6 +93,5 @@ class Reportes extends CI_Controller
             $pdf->Ln(5);
             $pdf->Output();
 	}
-
 }
 ?>
